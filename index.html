@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer & Designer</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        #hero {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 150px 0 100px;
+        }
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInDown 1s forwards;
+        }
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 0.5s;
+        }
+        .skills-list, .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .skill-item{
+            width: calc(33.333% - 20px);
+        }
+        .skill-item, .project-item {
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            /* width: calc(33.333% - 20px); */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-item:hover, .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .project-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #contact form input, #contact form textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        #contact form button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #contact form button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .projects-list a{
+            text-decoration: none;
+            color: #000;
+            width: calc(33.333% - 20px);
+        }
+        .project-item img{
+            width: 150px;
+            height: 50px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+            .skill-item, .project-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .skill-item, .project-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Shubham Kumar</h1>
+                <p>Frontend Developer & Designer</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <div class="skill-item">HTML5</div>
+                    <div class="skill-item">CSS3</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">React</div>
+                    <div class="skill-item">UI/UX Design</div>
+                    <div class="skill-item">Responsive Design</div>
+                    <div class="skill-item">Java</div>
+                    <div class="skill-item">MySQL</div>
+                    <div class="skill-item">Bootstrap</div>
+                    <div class="skill-item">Tailwind</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-list">
+                    <a target="_blank" href="https://earnmet.com/">
+                        <div class="project-item">
+                            <img src="https://earnmet.com/assets/kuku.svg" alt="Project 1">
+                            <h3>Earnmate</h3>
+                            <p>Languages : HTML, CSS, JavaScript, Hosting, Bootstrap</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://github.com/Shubhamkumar8321/Currency-Converter/tree/main/Currency%20convertor">
+                        <div class="project-item">
+                            <img src="https://1.bp.blogspot.com/-XScuPk-wlv8/YOFujE4PP7I/AAAAAAAAEEo/IOY7NfVSpeoe8kXyqcTgbv62Fp1KjYpAACLcBGAsYHQ/s16000/Currency-Converter.jpg" alt="Project 2">
+                            <h3>Currency convertor</h3>
+                            <p>Languages : HTML, CSS, JavaScript, Bootstrap</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://github.com/Shubhamkumar8321/Games/tree/main/bubble%20game">
+                        <div class="project-item">
+                            <img src="https://th.bing.com/th/id/OIP.BxBG7RrnMJQqz-QFFPnHEQAAAA?rs=1&pid=ImgDetMain" alt="Project 3">
+                            <h3>Bubble Game</h3>
+                            <p>Languages : HTML, CSS, <br> JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Designing Projects</h2>
+                <div class="projects-list">
+                    <a target="_blank" href="https://www.figma.com/design/e4Ze01JUJtnWuejbe8apWh/Shooting-spot?node-id=0-1&node-type=canvas&t=XuUf7xwEXzm5ULv7-0">
+                        <div class="project-item" style="background: linear-gradient(90deg, rgba(255,242,112,1) 0%, rgba(0,212,255,1) 100%);">
+                            <h3>Design 1</h3>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.figma.com/design/cmE6wJdDNMpzNRi2wBnoK4/Untitled?node-id=0-1&node-type=canvas&t=7HMBbICHUk1YLCfw-0">
+                        <div class="project-item" style="background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(255,242,112) 100%);">
+                            <h3>Design 2</h3>
+                            <!-- <p>Languages : HTML, CSS, JavaScript, Bootstrap</p> -->
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.figma.com/design/lpasWC56nlRTj8htQ1pnG2/Doctors-guide?node-id=0-1&node-type=canvas&t=nsGeXHDXgvFHGLWw-0">
+                        <div class="project-item" style="background: linear-gradient(90deg, rgba(255,242,112,1) 0%, rgba(0,212,255,1) 100%);">
+                            <h3>Design 3</h3>
+                            <!-- <p>A brief description of Project 3</p> -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shubham Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            });
+
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Animate elements when they come into view
+            const animateOnScroll = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(animateOnScroll, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.skill-item, .project-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
